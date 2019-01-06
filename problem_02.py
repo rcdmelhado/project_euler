@@ -8,7 +8,7 @@ find the sum of the even-valued terms.
 """
 
 
-def get_fibonacci_even_terms_sum_up_to(highest_number):
+def get_fibonacci_even_terms_sum_up_to(highest_number: int) -> int:
     even_terms_sum = 0
     last_number = 1
     actual_number = 2

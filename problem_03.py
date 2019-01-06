@@ -5,7 +5,7 @@ What is the largest prime factor of the number 600851475143?
 """
 
 
-def highest_prime_factor(number):
+def highest_prime_factor(number: int) -> int:
     remainder = number
     largest_prime_number = 0
     for i in range(2, remainder):
