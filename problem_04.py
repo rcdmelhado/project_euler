@@ -6,17 +6,6 @@ Find the largest palindrome made from the product of two 3-digit numbers.
 """
 
 
-def get_range(number_of_digits: int) -> tuple:
-    _max = ''
-    _min = ''
-
-    for i in range(number_of_digits):
-        _max += '9'
-        _min += '0'
-
-    return int(_max), int('1' + _min[number_of_digits - 1])
-
-
 def is_palindrome(number: int) -> bool:
     half_chars = int(len(str(number)) / 2)
     begin = str(number)[half_chars:]
@@ -27,7 +16,9 @@ def is_palindrome(number: int) -> bool:
 
 
 def get_largest_palindrome_product(_digits: int) -> tuple:
-    max_number, min_number = get_range(_digits)
+    max_number = int('9' * _digits)
+    min_number = int('1' + '0' * (_digits - 1))
+
     _largest_palindrome = 0
     _a = 0
     _b = 0
