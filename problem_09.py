@@ -11,13 +11,13 @@ Find the product abc.
 def product_pythagorean_triplet(numbers_sum):
     for a in range(3, numbers_sum):
 
-        for b in range(4, numbers_sum):
+        for b in range(a + 1, numbers_sum):
             c = (a ** 2 + b ** 2) ** 0.5
 
             if a + b + c > numbers_sum:
                 continue
 
-            if c.is_integer() and a + b + c == numbers_sum:
+            if a + b + c == numbers_sum:
                 return int(a * b * c)
 
 
